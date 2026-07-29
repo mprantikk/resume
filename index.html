@@ -31,7 +31,7 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
             color: var(--text-main);
             background-color: #cbd5e1;
-            line-height: 1.45;
+            line-height: 1.4;
             padding: 20px 0;
         }
 
@@ -62,7 +62,7 @@
             transform: translateY(-1px);
         }
 
-        /* --- STRICT PRINT SETUP --- */
+        /* --- PRINT CONFIGURATION --- */
         @page {
             size: A4 portrait;
             margin: 0;
@@ -71,7 +71,7 @@
         /* --- 2-PAGE CONTAINER ARCHITECTURE --- */
         .resume-page {
             width: 210mm;
-            height: 297mm;
+            min-height: 297mm;
             padding: 10mm 12mm;
             margin: 0 auto 20px auto;
             background: #ffffff;
@@ -81,18 +81,16 @@
             overflow: hidden;
             display: flex;
             flex-direction: column;
-            page-break-after: always;
-            break-after: page;
+            justify-content: space-between;
         }
 
-        /* Print Page Break Controls */
+        /* Print Specific Adjustments */
         @media print {
             html, body {
                 background: none !important;
                 padding: 0 !important;
                 margin: 0 !important;
                 width: 210mm;
-                height: 594mm;
             }
             .resume-page {
                 margin: 0 !important;
@@ -100,10 +98,12 @@
                 border-radius: 0 !important;
                 width: 210mm !important;
                 height: 297mm !important;
+                min-height: 297mm !important;
+                max-height: 297mm !important;
                 page-break-after: always !important;
                 break-after: page !important;
                 page-break-inside: avoid !important;
-                break-inside: avoid !important;
+                overflow: hidden !important;
             }
             .no-print, .download-btn {
                 display: none !important;
@@ -115,15 +115,15 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 20px;
+            padding: 14px 18px;
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
             border-radius: 8px;
             color: #ffffff;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .header-main h1 {
-            font-size: 1.8rem;
+            font-size: 1.75rem;
             font-weight: 800;
             letter-spacing: -0.5px;
             color: #ffffff;
@@ -131,17 +131,17 @@
         }
 
         .header-main h2 {
-            font-size: 0.92rem;
+            font-size: 0.9rem;
             font-weight: 600;
             color: #38bdf8;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .contact-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px 14px;
-            font-size: 0.78rem;
+            gap: 8px 14px;
+            font-size: 0.76rem;
         }
 
         .contact-grid a, .contact-grid span {
@@ -157,8 +157,8 @@
         }
 
         .header-avatar {
-            width: 95px;
-            height: 95px;
+            width: 85px;
+            height: 85px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #38bdf8;
@@ -170,35 +170,35 @@
         .summary-card {
             background-color: var(--bg-light);
             border-left: 4px solid var(--brand-indigo);
-            padding: 10px 14px;
+            padding: 8px 12px;
             border-radius: 0 6px 6px 0;
-            font-size: 0.83rem;
+            font-size: 0.8rem;
             color: var(--text-muted);
-            margin-bottom: 14px;
-            line-height: 1.45;
+            margin-bottom: 12px;
+            line-height: 1.4;
         }
 
         /* --- TWO COLUMN LAYOUT GRID --- */
         .layout-grid {
             display: grid;
             grid-template-columns: 2.1fr 1fr;
-            gap: 18px;
+            gap: 16px;
             flex: 1;
         }
 
         /* --- SECTION HEADINGS --- */
         .section-header {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.6px;
+            letter-spacing: 0.5px;
             color: var(--primary-navy);
             border-bottom: 2px solid var(--border-color);
-            padding-bottom: 3px;
-            margin-bottom: 10px;
+            padding-bottom: 2px;
+            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .section-header i {
@@ -207,7 +207,7 @@
 
         /* --- TIMELINE & EXPERIENCES --- */
         .experience-item {
-            margin-bottom: 12px;
+            margin-bottom: 10px;
         }
 
         .company-bar {
@@ -218,22 +218,22 @@
         }
 
         .company-name {
-            font-size: 0.95rem;
+            font-size: 0.92rem;
             font-weight: 700;
             color: var(--primary-navy);
         }
 
         .date-badge {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 600;
             color: var(--brand-indigo);
             background: #eef2ff;
-            padding: 2px 6px;
+            padding: 1px 6px;
             border-radius: 4px;
         }
 
         .role-wrapper {
-            margin-top: 6px;
+            margin-top: 4px;
             padding-left: 8px;
             border-left: 2px solid var(--border-color);
         }
@@ -246,17 +246,17 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 3px;
+            margin-bottom: 2px;
         }
 
         .role-title {
-            font-size: 0.88rem;
+            font-size: 0.84rem;
             font-weight: 700;
             color: var(--text-main);
         }
 
         .promo-tag {
-            font-size: 0.65rem;
+            font-size: 0.62rem;
             font-weight: 700;
             background: var(--accent-bg);
             color: var(--brand-indigo);
@@ -270,9 +270,9 @@
         .award-banner {
             background-color: #f0fdf4;
             border-left: 3px solid #16a34a;
-            padding: 5px 8px;
+            padding: 4px 8px;
             margin: 4px 0;
-            font-size: 0.78rem;
+            font-size: 0.75rem;
             color: #15803d;
             border-radius: 0 4px 4px 0;
         }
@@ -280,7 +280,7 @@
         .bullet-list {
             list-style-type: disc;
             margin-left: 14px;
-            font-size: 0.81rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
         }
 
@@ -301,23 +301,23 @@
             color: var(--text-main);
             padding: 2px 6px;
             border-radius: 4px;
-            font-size: 0.74rem;
+            font-size: 0.72rem;
             font-weight: 500;
         }
 
         /* --- CERTIFICATIONS & EDUCATION --- */
         .sidebar-item {
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .sidebar-item-title {
-            font-size: 0.82rem;
+            font-size: 0.78rem;
             font-weight: 700;
             color: var(--primary-navy);
         }
 
         .sidebar-item-sub {
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             color: var(--text-muted);
         }
 
@@ -326,11 +326,11 @@
             border: 1px solid var(--border-color);
             border-radius: 6px;
             padding: 6px 8px;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .project-card h4 {
-            font-size: 0.83rem;
+            font-size: 0.8rem;
             color: var(--primary-navy);
             display: flex;
             justify-content: space-between;
@@ -338,19 +338,18 @@
         }
 
         .project-card p {
-            font-size: 0.76rem;
+            font-size: 0.74rem;
             color: var(--text-muted);
             margin-top: 2px;
         }
 
         /* Page Footer Marker */
         .page-number {
-            position: absolute;
-            bottom: 6mm;
-            right: 12mm;
-            font-size: 0.72rem;
+            font-size: 0.7rem;
             color: #94a3b8;
             font-weight: 600;
+            text-align: right;
+            margin-top: 8px;
         }
     </style>
 </head>
@@ -363,142 +362,144 @@
 
     <!-- ================= PAGE 1 ================= -->
     <div class="resume-page">
-        <!-- HEADER -->
-        <header>
-            <div class="header-main">
-                <h1>MD. MASUD PARVEJ</h1>
-                <h2>Lead, Growth Operations | Data Analytics Professional</h2>
-                <div class="contact-grid">
-                    <span><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</span>
-                    <span><i class="fa-solid fa-phone"></i> +880 1878 939548</span>
-                    <a href="mailto:mprantikk@gmail.com"><i class="fa-solid fa-envelope"></i> mprantikk@gmail.com</a>
-                    <a href="https://mprantikk.github.io" target="_blank"><i class="fa-solid fa-globe"></i> mprantikk.github.io</a>
-                    <a href="http://linkedin.com/in/mprantikk" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/mprantikk</a>
-                    <a href="https://github.com/mprantikk" target="_blank"><i class="fa-brands fa-github"></i> github.com/mprantikk</a>
-                </div>
-            </div>
-            <img class="header-avatar" src="https://github.com/mprantikk.png" alt="Md. Masud Parvej">
-        </header>
-
-        <!-- PROFESSIONAL SUMMARY -->
-        <div class="summary-card">
-            A Data Analytics professional with several years of experience in data analytics, automation, and business intelligence. Capable of working with cross-functional teams to transform complex data into actionable insights that inform strategic decision-making. Experienced in improving data systems while maintaining data accuracy, integrity, and security. Proficient in maintaining and improving data analysis tools, creating thorough reports, and doing predictive analytics to meet business objectives.
-        </div>
-
-        <!-- MAIN LAYOUT PAGE 1 -->
-        <div class="layout-grid">
-            <!-- LEFT COLUMN: PRIMARY EXPERIENCE -->
-            <div class="left-col">
-                <div class="section-header">
-                    <i class="fa-solid fa-briefcase"></i> Work Experience
-                </div>
-
-                <!-- COMMURE (PROMOTION HISTORY) -->
-                <div class="experience-item">
-                    <div class="company-bar">
-                        <span class="company-name">Commure</span>
-                        <span class="date-badge">Jan 2025 – Present</span>
-                    </div>
-
-                    <!-- Role 1: Current Promoted Role -->
-                    <div class="role-wrapper promoted">
-                        <div class="role-title-bar">
-                            <span class="role-title">Lead, Growth Operations <span class="promo-tag">Promoted</span></span>
-                            <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 500;">Apr 2026 – Present</span>
-                        </div>
-                        <ul class="bullet-list">
-                            <li>Lead Growth Operations, bridging business strategy, data analytics, and operational technology execution.</li>
-                            <li>Drive revenue benchmarking, quality assurance, and automated insights to inform executive growth decisions.</li>
-                            <li>Build and automate scalable benchmarking and reporting infrastructure across operational pipelines.</li>
-                            <li>Collaborate closely with Engineering to debug EHR and operational datasets, resolving cross-system inconsistencies.</li>
-                            <li>Translate complex business challenges into data-driven analytical solutions for executive leadership.</li>
-                        </ul>
-                    </div>
-
-                    <!-- Role 2: Initial Role -->
-                    <div class="role-wrapper" style="margin-top: 8px;">
-                        <div class="role-title-bar">
-                            <span class="role-title" style="color: var(--text-muted);">Data Operations Manager</span>
-                            <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 500;">Jan 2025 – Mar 2026</span>
-                        </div>
-                        <ul class="bullet-list">
-                            <li>Led cross-functional teams in Revenue Cycle Management (RCM) and Financial Data Analytics, driving data-driven decisions across the organization.</li>
-                            <li>Architected scalable data dashboards using PostgreSQL, Snowflake, Power BI, and Advanced Excel (VBA) to optimize reporting and analytics.</li>
-                            <li>Automated operational workflows and enhanced team productivity using Retool, Notion, and Linear.</li>
-                            <li>Established robust data governance and validation protocols to ensure strict data integrity and system reliability.</li>
-                            <li>Analyzed financial trends to identify optimization opportunities and support strategic initiatives.</li>
-                        </ul>
+        <div>
+            <!-- HEADER -->
+            <header>
+                <div class="header-main">
+                    <h1>MD. MASUD PARVEJ</h1>
+                    <h2>Lead, Growth Operations | Data Analytics Professional</h2>
+                    <div class="contact-grid">
+                        <span><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</span>
+                        <span><i class="fa-solid fa-phone"></i> +880 1878 939548</span>
+                        <a href="mailto:mprantikk@gmail.com"><i class="fa-solid fa-envelope"></i> mprantikk@gmail.com</a>
+                        <a href="https://mprantikk.github.io" target="_blank"><i class="fa-solid fa-globe"></i> mprantikk.github.io</a>
+                        <a href="http://linkedin.com/in/mprantikk" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/mprantikk</a>
+                        <a href="https://github.com/mprantikk" target="_blank"><i class="fa-brands fa-github"></i> github.com/mprantikk</a>
                     </div>
                 </div>
+                <img class="header-avatar" src="https://github.com/mprantikk.png" alt="Md. Masud Parvej">
+            </header>
 
-                <!-- PORTER -->
-                <div class="experience-item">
-                    <div class="company-bar">
-                        <span class="company-name">Porter</span>
-                        <span class="date-badge">Jul 2024 – Jan 2025</span>
-                    </div>
-                    <div class="role-wrapper">
-                        <div class="role-title-bar">
-                            <span class="role-title">Senior Data Analyst</span>
-                        </div>
-                        <ul class="bullet-list">
-                            <li>Collaborated with management to identify and prioritize core business needs, aligning analytical initiatives with organizational goals.</li>
-                            <li>Designed, developed, and managed comprehensive stakeholder reporting suites providing critical insights for business decisions.</li>
-                            <li>Defined and documented Business-As-Usual (BAU) requirements, ensuring operational continuity and smooth daily processes.</li>
-                            <li>Prepared and presented executive reports detailing patterns, trends, and predictive analyses to support strategic planning.</li>
-                            <li>Acquired, maintained, and optimized primary/secondary data sources, performing routine quality checks to preserve database accuracy.</li>
-                        </ul>
-                    </div>
-                </div>
+            <!-- PROFESSIONAL SUMMARY -->
+            <div class="summary-card">
+                A Data Analytics professional with several years of experience in data analytics, automation, and business intelligence. Capable of working with cross-functional teams to transform complex data into actionable insights that inform strategic decision-making. Experienced in improving data systems while maintaining data accuracy, integrity, and security. Proficient in maintaining and improving data analysis tools, creating thorough reports, and doing predictive analytics to meet business objectives.
             </div>
 
-            <!-- RIGHT COLUMN: SKILLS & CERTS (PAGE 1) -->
-            <div class="right-col">
-                <div class="section-header">
-                    <i class="fa-solid fa-layer-group"></i> Technical Stack
-                </div>
-                <div class="skills-flex" style="margin-bottom: 16px;">
-                    <span class="skill-pill">PostgreSQL</span>
-                    <span class="skill-pill">MS SQL Server</span>
-                    <span class="skill-pill">Power BI (PL-300)</span>
-                    <span class="skill-pill">Tableau</span>
-                    <span class="skill-pill">Snowflake</span>
-                    <span class="skill-pill">Metabase</span>
-                    <span class="skill-pill">DAX</span>
-                    <span class="skill-pill">Advanced Excel (VBA)</span>
-                    <span class="skill-pill">Google Cloud (GCP)</span>
-                    <span class="skill-pill">Retool</span>
-                    <span class="skill-pill">Notion & Linear</span>
-                    <span class="skill-pill">Agile Analytics (ICP-A)</span>
-                    <span class="skill-pill">Data Governance</span>
-                    <span class="skill-pill">HRIS / TalentX</span>
-                    <span class="skill-pill">Predictive Intelligence</span>
+            <!-- MAIN LAYOUT PAGE 1 -->
+            <div class="layout-grid">
+                <!-- LEFT COLUMN: PRIMARY EXPERIENCE -->
+                <div class="left-col">
+                    <div class="section-header">
+                        <i class="fa-solid fa-briefcase"></i> Work Experience
+                    </div>
+
+                    <!-- COMMURE (PROMOTION HISTORY) -->
+                    <div class="experience-item">
+                        <div class="company-bar">
+                            <span class="company-name">Commure</span>
+                            <span class="date-badge">Jan 2025 – Present</span>
+                        </div>
+
+                        <!-- Role 1: Current Promoted Role -->
+                        <div class="role-wrapper promoted">
+                            <div class="role-title-bar">
+                                <span class="role-title">Lead, Growth Operations <span class="promo-tag">Promoted</span></span>
+                                <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">Apr 2026 – Present</span>
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Lead Growth Operations, bridging business strategy, data analytics, and operational technology execution.</li>
+                                <li>Drive revenue benchmarking, quality assurance, and automated insights to inform executive growth decisions.</li>
+                                <li>Build and automate scalable benchmarking and reporting infrastructure across operational pipelines.</li>
+                                <li>Collaborate closely with Engineering to debug EHR and operational datasets, resolving cross-system inconsistencies.</li>
+                                <li>Translate complex business challenges into data-driven analytical solutions for executive leadership.</li>
+                            </ul>
+                        </div>
+
+                        <!-- Role 2: Initial Role -->
+                        <div class="role-wrapper" style="margin-top: 6px;">
+                            <div class="role-title-bar">
+                                <span class="role-title" style="color: var(--text-muted);">Data Operations Manager</span>
+                                <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 500;">Jan 2025 – Mar 2026</span>
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Led cross-functional teams in Revenue Cycle Management (RCM) and Financial Data Analytics, driving data-driven decisions across the organization.</li>
+                                <li>Architected scalable data dashboards using PostgreSQL, Snowflake, Power BI, and Advanced Excel (VBA) to optimize reporting and analytics.</li>
+                                <li>Automated operational workflows and enhanced team productivity using Retool, Notion, and Linear.</li>
+                                <li>Established robust data governance and validation protocols to ensure strict data integrity and system reliability.</li>
+                                <li>Analyzed financial trends to identify optimization opportunities and support strategic initiatives.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- PORTER -->
+                    <div class="experience-item">
+                        <div class="company-bar">
+                            <span class="company-name">Porter</span>
+                            <span class="date-badge">Jul 2024 – Jan 2025</span>
+                        </div>
+                        <div class="role-wrapper">
+                            <div class="role-title-bar">
+                                <span class="role-title">Senior Data Analyst</span>
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Collaborated with management to identify and prioritize core business needs, aligning analytical initiatives with organizational goals.</li>
+                                <li>Designed, developed, and managed comprehensive stakeholder reporting suites providing critical insights for business decisions.</li>
+                                <li>Defined and documented Business-As-Usual (BAU) requirements, ensuring operational continuity and smooth daily processes.</li>
+                                <li>Prepared and presented executive reports detailing patterns, trends, and predictive analyses to support strategic planning.</li>
+                                <li>Acquired, maintained, and optimized primary/secondary data sources, performing routine quality checks to preserve database accuracy.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="section-header">
-                    <i class="fa-solid fa-graduation-cap"></i> Education
-                </div>
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">M.Sc. in Data Science & Analytics</div>
-                    <div class="sidebar-item-sub">East West University</div>
-                    <div style="font-size: 0.7rem; color: var(--brand-indigo); font-weight: 600;">Currently Pursuing</div>
-                </div>
-                <div class="sidebar-item" style="margin-bottom: 16px;">
-                    <div class="sidebar-item-title">B.Sc. in Electrical & Electronic Eng.</div>
-                    <div class="sidebar-item-sub">United International University (2018)</div>
-                    <div style="font-size: 0.7rem; color: var(--text-muted);">CGPA: 3.12 / 4.00</div>
-                </div>
+                <!-- RIGHT COLUMN: SKILLS & CERTS (PAGE 1) -->
+                <div class="right-col">
+                    <div class="section-header">
+                        <i class="fa-solid fa-layer-group"></i> Technical Stack
+                    </div>
+                    <div class="skills-flex" style="margin-bottom: 12px;">
+                        <span class="skill-pill">PostgreSQL</span>
+                        <span class="skill-pill">MS SQL Server</span>
+                        <span class="skill-pill">Power BI (PL-300)</span>
+                        <span class="skill-pill">Tableau</span>
+                        <span class="skill-pill">Snowflake</span>
+                        <span class="skill-pill">Metabase</span>
+                        <span class="skill-pill">DAX</span>
+                        <span class="skill-pill">Advanced Excel (VBA)</span>
+                        <span class="skill-pill">Google Cloud (GCP)</span>
+                        <span class="skill-pill">Retool</span>
+                        <span class="skill-pill">Notion & Linear</span>
+                        <span class="skill-pill">Agile Analytics (ICP-A)</span>
+                        <span class="skill-pill">Data Governance</span>
+                        <span class="skill-pill">HRIS / TalentX</span>
+                        <span class="skill-pill">Predictive Intelligence</span>
+                    </div>
 
-                <div class="section-header">
-                    <i class="fa-solid fa-award"></i> Featured Awards
-                </div>
-                <div class="award-banner" style="margin-bottom: 6px;">
-                    <strong>Star Achiever Award</strong><br>
-                    ShopUp | Q1 & Q2 2023
-                </div>
-                <div class="award-banner">
-                    <strong>Commando Award</strong><br>
-                    Grameen Danone Foods | 2021
+                    <div class="section-header">
+                        <i class="fa-solid fa-graduation-cap"></i> Education
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">M.Sc. in Data Science & Analytics</div>
+                        <div class="sidebar-item-sub">East West University</div>
+                        <div style="font-size: 0.68rem; color: var(--brand-indigo); font-weight: 600;">Currently Pursuing</div>
+                    </div>
+                    <div class="sidebar-item" style="margin-bottom: 12px;">
+                        <div class="sidebar-item-title">B.Sc. in Electrical & Electronic Eng.</div>
+                        <div class="sidebar-item-sub">United International University (2018)</div>
+                        <div style="font-size: 0.68rem; color: var(--text-muted);">CGPA: 3.12 / 4.00</div>
+                    </div>
+
+                    <div class="section-header">
+                        <i class="fa-solid fa-award"></i> Featured Awards
+                    </div>
+                    <div class="award-banner" style="margin-bottom: 4px;">
+                        <strong>Star Achiever Award</strong><br>
+                        ShopUp | Q1 & Q2 2023
+                    </div>
+                    <div class="award-banner">
+                        <strong>Commando Award</strong><br>
+                        Grameen Danone Foods | 2021
+                    </div>
                 </div>
             </div>
         </div>
@@ -509,153 +510,155 @@
 
     <!-- ================= PAGE 2 ================= -->
     <div class="resume-page">
-        <div class="layout-grid">
-            <!-- LEFT COLUMN: CONTINUED EXPERIENCE & RESEARCH -->
-            <div class="left-col">
-                <div class="section-header">
-                    <i class="fa-solid fa-briefcase"></i> Work Experience (Continued)
-                </div>
-
-                <!-- SHOPUP -->
-                <div class="experience-item">
-                    <div class="company-bar">
-                        <span class="company-name">ShopUp</span>
-                        <span class="date-badge">Feb 2022 – Jul 2024</span>
+        <div>
+            <div class="layout-grid">
+                <!-- LEFT COLUMN: CONTINUED EXPERIENCE & RESEARCH -->
+                <div class="left-col">
+                    <div class="section-header">
+                        <i class="fa-solid fa-briefcase"></i> Work Experience (Continued)
                     </div>
-                    <div class="role-wrapper">
-                        <div class="role-title-bar">
-                            <span class="role-title">Automation & Analytics Expert</span>
+
+                    <!-- SHOPUP -->
+                    <div class="experience-item">
+                        <div class="company-bar">
+                            <span class="company-name">ShopUp</span>
+                            <span class="date-badge">Feb 2022 – Jul 2024</span>
                         </div>
-                        <div class="award-banner">
-                            Successfully optimized ShopUp's HRIS (TalentX), driving a 15% increase in system data accuracy.
+                        <div class="role-wrapper">
+                            <div class="role-title-bar">
+                                <span class="role-title">Automation & Analytics Expert</span>
+                            </div>
+                            <div class="award-banner">
+                                Successfully optimized ShopUp's HRIS (TalentX), driving a 15% increase in system data accuracy.
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Managed and ensured the optimal functionality of HRIS TalentX for data accuracy.</li>
+                                <li>Drove and implemented automation initiatives across HR processes to enhance operational efficiency.</li>
+                                <li>Conducted in-depth HR and revenue data analysis to provide strategic, data-driven recommendations.</li>
+                                <li>Established and maintained robust data governance protocols to ensure HR data integrity and security.</li>
+                                <li>Designed and executed performance appraisal systems that yield actionable insights for employee development.</li>
+                            </ul>
                         </div>
-                        <ul class="bullet-list">
-                            <li>Managed and ensured the optimal functionality of HRIS TalentX for data accuracy.</li>
-                            <li>Drove and implemented automation initiatives across HR processes to enhance operational efficiency.</li>
-                            <li>Conducted in-depth HR and revenue data analysis to provide strategic, data-driven recommendations.</li>
-                            <li>Established and maintained robust data governance protocols to ensure HR data integrity and security.</li>
-                            <li>Designed and executed performance appraisal systems that yield actionable insights for employee development.</li>
-                        </ul>
                     </div>
-                </div>
 
-                <!-- GRAMEEN DANONE -->
-                <div class="experience-item">
-                    <div class="company-bar">
-                        <span class="company-name">Grameen Danone Foods Limited</span>
-                        <span class="date-badge">Dec 2020 – Jan 2022</span>
-                    </div>
-                    <div class="role-wrapper">
-                        <div class="role-title-bar">
-                            <span class="role-title">Business Intelligence Executive</span>
+                    <!-- GRAMEEN DANONE -->
+                    <div class="experience-item">
+                        <div class="company-bar">
+                            <span class="company-name">Grameen Danone Foods Limited</span>
+                            <span class="date-badge">Dec 2020 – Jan 2022</span>
                         </div>
-                        <div class="award-banner">
-                            Led Sales App development, driving 40% data management gain & 30% expansion in product portfolio.
+                        <div class="role-wrapper">
+                            <div class="role-title-bar">
+                                <span class="role-title">Business Intelligence Executive</span>
+                            </div>
+                            <div class="award-banner">
+                                Led Sales App development, driving 40% data management gain & 30% expansion in product portfolio.
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Utilized Power BI, SQL, and Excel for strategic data analysis, boosting operational productivity by 20%.</li>
+                                <li>Led development and maintenance of a custom Sales App to optimize data management and analysis.</li>
+                                <li>Conducted advanced data analysis to support business strategy, operations, and cross-departmental growth.</li>
+                            </ul>
                         </div>
-                        <ul class="bullet-list">
-                            <li>Utilized Power BI, SQL, and Excel for strategic data analysis, boosting operational productivity by 20%.</li>
-                            <li>Led development and maintenance of a custom Sales App to optimize data management and analysis.</li>
-                            <li>Conducted advanced data analysis to support business strategy, operations, and cross-departmental growth.</li>
-                        </ul>
                     </div>
-                </div>
 
-                <!-- MIND MAPPER -->
-                <div class="experience-item">
-                    <div class="company-bar">
-                        <span class="company-name">Mind Mapper Bangladesh</span>
-                        <span class="date-badge">Dec 2019 – Dec 2020</span>
-                    </div>
-                    <div class="role-wrapper">
-                        <div class="role-title-bar">
-                            <span class="role-title">Business Development Specialist</span>
+                    <!-- MIND MAPPER -->
+                    <div class="experience-item">
+                        <div class="company-bar">
+                            <span class="company-name">Mind Mapper Bangladesh</span>
+                            <span class="date-badge">Dec 2019 – Dec 2020</span>
                         </div>
-                        <ul class="bullet-list">
-                            <li>Led transition of operations and training programs from offline to online, implementing digital processes.</li>
-                            <li>Planned and executed marketing initiatives to enhance sales management and drive business growth.</li>
-                        </ul>
+                        <div class="role-wrapper">
+                            <div class="role-title-bar">
+                                <span class="role-title">Business Development Specialist</span>
+                            </div>
+                            <ul class="bullet-list">
+                                <li>Led transition of operations and training programs from offline to online, implementing digital processes.</li>
+                                <li>Planned and executed marketing initiatives to enhance sales management and drive business growth.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- RESEARCH & PUBLICATIONS -->
+                    <div class="section-header" style="margin-top: 10px;">
+                        <i class="fa-solid fa-flask"></i> Research & Publications
+                    </div>
+                    <div class="project-card">
+                        <h4>Insight Quality Evaluation (IQE) Framework <a href="https://mprantikk.github.io" target="_blank" style="font-size: 0.72rem; color: var(--brand-indigo); text-decoration: none;">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                        <p><strong>Beyond the Dashboard: Evaluating Insight Quality in AI-Augmented BI Systems</strong>. Proposes a 4-dimensional conceptual evaluation model: <em>Statistical Validity, Contextual Relevance, Novelty, and Actionability</em>.</p>
+                    </div>
+
+                    <!-- OPEN SOURCE PROJECTS -->
+                    <div class="section-header" style="margin-top: 8px;">
+                        <i class="fa-solid fa-code-branch"></i> Key Analytical Projects
+                    </div>
+                    <div class="project-card">
+                        <h4>RCM Revenue Benchmarking <a href="https://github.com/mprantikk/rcm-revenue-benchmarking" target="_blank" style="font-size: 0.72rem; color: var(--brand-indigo); text-decoration: none;">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                        <p>Python & PostgreSQL analytical benchmarking pipeline tracking healthcare RCM collection rates and claim metrics.</p>
+                    </div>
+                    <div class="project-card">
+                        <h4>SQL Revenue Analytics <a href="https://github.com/mprantikk/sql-revenue-analytics" target="_blank" style="font-size: 0.72rem; color: var(--brand-indigo); text-decoration: none;">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
+                        <p>PostgreSQL schema and querying suite built for business intelligence, customer segmentation, and automated protocols.</p>
                     </div>
                 </div>
 
-                <!-- RESEARCH & PUBLICATIONS -->
-                <div class="section-header" style="margin-top: 14px;">
-                    <i class="fa-solid fa-flask"></i> Research & Publications
-                </div>
-                <div class="project-card">
-                    <h4>Insight Quality Evaluation (IQE) Framework <a href="https://mprantikk.github.io" target="_blank" style="font-size: 0.72rem; color: var(--brand-indigo); text-decoration: none;">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
-                    <p><strong>Beyond the Dashboard: Evaluating Insight Quality in AI-Augmented BI Systems</strong>. Proposes a 4-dimensional conceptual evaluation model: <em>Statistical Validity, Contextual Relevance, Novelty, and Actionability</em>.</p>
-                </div>
+                <!-- RIGHT COLUMN: CERTIFICATIONS & DEVELOPMENT (PAGE 2) -->
+                <div class="right-col">
+                    <div class="section-header">
+                        <i class="fa-solid fa-certificate"></i> Certifications
+                    </div>
+                    
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">Certified Supply Chain Analyst (CSCA)</div>
+                        <div class="sidebar-item-sub">ISCEA Bangladesh | 100% Scholarship Recipient</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">Agile Analytics (ICP-A)</div>
+                        <div class="sidebar-item-sub">ICAgile Certified Professional | Oct 2024</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">Power BI Data Analyst (PL-300)</div>
+                        <div class="sidebar-item-sub">Microsoft Certified Associate | Mar 2023</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">Google Data Analytics Professional</div>
+                        <div class="sidebar-item-sub">Google (Coursera) | Jun 2023</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">IBM Data Analytics Professional</div>
+                        <div class="sidebar-item-sub">IBM (Coursera) | Aug 2022</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">MOS: Excel Expert</div>
+                        <div class="sidebar-item-sub">Microsoft Certified | Jun 2020</div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-item-title">Big Data & Machine Learning</div>
+                        <div class="sidebar-item-sub">Google Cloud (GCP) | May 2025</div>
+                    </div>
+                    <div class="sidebar-item" style="margin-bottom: 12px;">
+                        <div class="sidebar-item-title">Data Governance & Stewardship</div>
+                        <div class="sidebar-item-sub">University of Washington | May 2023</div>
+                    </div>
 
-                <!-- OPEN SOURCE PROJECTS -->
-                <div class="section-header" style="margin-top: 10px;">
-                    <i class="fa-solid fa-code-branch"></i> Key Analytical Projects
-                </div>
-                <div class="project-card">
-                    <h4>RCM Revenue Benchmarking <a href="https://github.com/mprantikk/rcm-revenue-benchmarking" target="_blank" style="font-size: 0.72rem; color: var(--brand-indigo); text-decoration: none;">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
-                    <p>Python & PostgreSQL analytical benchmarking pipeline tracking healthcare RCM collection rates and claim metrics.</p>
-                </div>
-                <div class="project-card">
-                    <h4>SQL Revenue Analytics <a href="https://github.com/mprantikk/sql-revenue-analytics" target="_blank" style="font-size: 0.72rem; color: var(--brand-indigo); text-decoration: none;">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
-                    <p>PostgreSQL schema and querying suite built for business intelligence, customer segmentation, and automated protocols.</p>
-                </div>
-            </div>
+                    <div class="section-header">
+                        <i class="fa-solid fa-book-open"></i> Self-Development
+                    </div>
+                    <ul class="bullet-list" style="margin-left: 10px; margin-bottom: 12px;">
+                        <li>Data Strategy for Leaders (LinkedIn)</li>
+                        <li>Leading Data & Analytics Teams</li>
+                        <li>Data Governance Foundations (DAMA)</li>
+                        <li>Agile Project Mgmt for Analytics</li>
+                        <li>Effective Stakeholder Communication</li>
+                    </ul>
 
-            <!-- RIGHT COLUMN: CERTIFICATIONS & DEVELOPMENT (PAGE 2) -->
-            <div class="right-col">
-                <div class="section-header">
-                    <i class="fa-solid fa-certificate"></i> Certifications
-                </div>
-                
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">Certified Supply Chain Analyst (CSCA)</div>
-                    <div class="sidebar-item-sub">ISCEA Bangladesh | 100% Scholarship Recipient</div>
-                </div>
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">Agile Analytics (ICP-A)</div>
-                    <div class="sidebar-item-sub">ICAgile Certified Professional | Oct 2024</div>
-                </div>
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">Power BI Data Analyst (PL-300)</div>
-                    <div class="sidebar-item-sub">Microsoft Certified Associate | Mar 2023</div>
-                </div>
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">Google Data Analytics Professional</div>
-                    <div class="sidebar-item-sub">Google (Coursera) | Jun 2023</div>
-                </div>
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">IBM Data Analytics Professional</div>
-                    <div class="sidebar-item-sub">IBM (Coursera) | Aug 2022</div>
-                </div>
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">MOS: Excel Expert</div>
-                    <div class="sidebar-item-sub">Microsoft Certified | Jun 2020</div>
-                </div>
-                <div class="sidebar-item">
-                    <div class="sidebar-item-title">Big Data & Machine Learning</div>
-                    <div class="sidebar-item-sub">Google Cloud (GCP) | May 2025</div>
-                </div>
-                <div class="sidebar-item" style="margin-bottom: 16px;">
-                    <div class="sidebar-item-title">Data Governance & Stewardship</div>
-                    <div class="sidebar-item-sub">University of Washington | May 2023</div>
-                </div>
-
-                <div class="section-header">
-                    <i class="fa-solid fa-book-open"></i> Self-Development
-                </div>
-                <ul class="bullet-list" style="margin-left: 10px; margin-bottom: 16px;">
-                    <li>Data Strategy for Leaders (LinkedIn)</li>
-                    <li>Leading Data & Analytics Teams</li>
-                    <li>Data Governance Foundations (DAMA)</li>
-                    <li>Agile Project Mgmt for Analytics</li>
-                    <li>Effective Stakeholder Communication</li>
-                </ul>
-
-                <div class="section-header">
-                    <i class="fa-solid fa-language"></i> Languages
-                </div>
-                <div style="font-size: 0.78rem; color: var(--text-muted);">
-                    <strong>Bengali:</strong> Native<br>
-                    <strong>English:</strong> Fluent
+                    <div class="section-header">
+                        <i class="fa-solid fa-language"></i> Languages
+                    </div>
+                    <div style="font-size: 0.76rem; color: var(--text-muted);">
+                        <strong>Bengali:</strong> Native<br>
+                        <strong>English:</strong> Fluent
+                    </div>
                 </div>
             </div>
         </div>
