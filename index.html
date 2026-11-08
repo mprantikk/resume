@@ -53,14 +53,13 @@
         .page-body { flex: 1; display: flex; flex-direction: column; min-height: 0; }
 
         @media print {
-            html, body { background: none !important; padding: 0 !important; margin: 0 !important; width: 210mm; }
+            html, body { background: none !important; padding: 0 !important; margin: 0 !important; width: 210mm; height: auto !important; overflow: visible !important; }
             .resume-page {
                 margin: 0 !important; box-shadow: none !important; border-radius: 0 !important;
-                width: 210mm !important; height: 296mm !important; max-height: 296mm !important;
-                page-break-after: always; break-after: page;
-                page-break-inside: avoid; break-inside: avoid; overflow: hidden !important;
+                width: 210mm !important; height: 288mm !important; min-height: 0 !important; max-height: 288mm !important;
+                overflow: hidden !important; break-inside: avoid; page-break-inside: avoid;
             }
-            .resume-page:last-of-type { page-break-after: auto; break-after: auto; }
+            .resume-page + .resume-page { break-before: page; page-break-before: always; }
             .no-print, .download-btn { display: none !important; }
         }
 
