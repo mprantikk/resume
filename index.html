@@ -4,237 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=850">
     <script>try { if (window.top !== window.self) document.documentElement.classList.add("embedded"); } catch (e) { document.documentElement.classList.add("embedded"); }</script>
-    <title>Md. Masud Parvej - Lead, Data Ops | Business Intelligence &amp; Data Analytics</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Md. Masud Parvej - Business Intelligence &amp; Data Operations Leader - Resume</title>
+    <meta name="description" content="Resume of Md. Masud Parvej: Lead, Data Ops at Commure. Business Intelligence, revenue analytics, and automation. Based in Dhaka, Bangladesh, open to remote roles worldwide.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-navy: #0f172a;
-            --brand-indigo: #4f46e5;
-            --brand-sky: #0284c7;
-            --text-main: #1e293b;
-            --text-muted: #475569;
-            --bg-light: #f8fafc;
-            --border-color: #e2e8f0;
-            --accent-bg: #eff6ff;
+            --navy: #0f172a;
+            --indigo: #2145f5;
+            --sun: #ffc93c;
+            --sky: #38bdf8;
+            --text: #1e293b;
+            --muted: #475569;
+            --line: #e2e8f0;
+            --soft: #f8fafc;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-            color: var(--text-main);
-            background-color: #cbd5e1;
-            line-height: 1.4;
-            padding: 20px 0;
-            -webkit-text-size-adjust: 100%;
-            text-size-adjust: 100%;
-            -webkit-print-color-adjust: exact;
-            print-color-adjust: exact;
-        }
-        .download-btn {
-            position: fixed; top: 20px; right: 20px; z-index: 1000;
-            background-color: var(--brand-indigo); color: #fff; border: none;
-            padding: 10px 18px; font-size: 0.9rem; font-weight: 600; border-radius: 6px;
-            cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            display: flex; align-items: center; gap: 8px; transition: all 0.2s ease;
-            font-family: inherit; text-decoration: none;
-        }
-        .download-btn:hover { background-color: #3730a3; box-shadow: 0 6px 16px rgba(0,0,0,0.2); transform: translateY(-1px); }
+        html, body { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; color: var(--text); background: #cbd5e1; line-height: 1.4; padding: 20px 0; }
 
-        .back-btn {
-            position: fixed; top: 20px; left: 20px; z-index: 1000;
-            background-color: #0f172a; color: #fff; text-decoration: none;
-            padding: 10px 18px; font-size: 0.9rem; font-weight: 600; border-radius: 6px;
+        .download-btn, .back-btn {
+            position: fixed; top: 20px; z-index: 1000; border: none; color: #fff; text-decoration: none;
+            padding: 10px 18px; font-size: 0.9rem; font-weight: 600; border-radius: 6px; cursor: pointer;
             box-shadow: 0 4px 12px rgba(0,0,0,0.15); display: flex; align-items: center; gap: 8px;
-            transition: all 0.2s ease;
+            transition: all 0.2s ease; font-family: inherit;
         }
-        .back-btn:hover { background-color: #1e293b; transform: translateY(-1px); }
+        .download-btn { right: 20px; background: var(--indigo); }
+        .download-btn:hover { background: #1a37c8; transform: translateY(-1px); }
+        .back-btn { left: 20px; background: var(--navy); }
+        .back-btn:hover { background: #1e293b; transform: translateY(-1px); }
         .embedded .back-btn { display: none; }
         .embedded body { background: transparent; padding: 0; }
 
         @page { size: A4 portrait; margin: 0; }
 
         .resume-page {
-            width: 210mm; height: 297mm;
-            padding: 10mm 12mm 8mm 12mm;
-            margin: 0 auto 20px auto;
-            background: #fff; border-radius: 4px;
-            box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
-            position: relative; overflow: hidden;
-            display: flex; flex-direction: column; justify-content: space-between;
+            width: 210mm; height: 297mm; padding: 10mm 13mm 8mm; margin: 0 auto 20px auto; background: #fff;
+            border-radius: 4px; box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1); position: relative; overflow: hidden;
+            display: flex; flex-direction: column;
         }
-        .page-body { flex: 1; display: flex; flex-direction: column; min-height: 0; }
+        .page-body { flex: 1; min-height: 0; }
 
         @media print {
             html, body { background: none !important; padding: 0 !important; margin: 0 !important; width: 210mm; height: auto !important; overflow: visible !important; }
             .resume-page {
                 margin: 0 !important; box-shadow: none !important; border-radius: 0 !important;
-                width: 210mm !important; height: 280mm !important; min-height: 0 !important; max-height: 280mm !important; padding: 7mm 12mm 5mm 12mm !important;
-                overflow: hidden !important; break-inside: avoid; page-break-inside: avoid;
+                width: 210mm !important; height: 280mm !important; min-height: 0 !important; max-height: 280mm !important;
+                padding: 7mm 13mm 5mm 13mm !important; overflow: hidden !important; break-inside: avoid; page-break-inside: avoid;
             }
             .resume-page + .resume-page { break-before: page; page-break-before: always; }
             .no-print, .download-btn, .back-btn { display: none !important; }
         }
 
-        header {
-            display: flex; align-items: center; justify-content: space-between;
-            padding: 14px 18px; background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            border-radius: 8px; color: #fff; margin-bottom: 10px;
-        }
-        .header-main h1 { font-size: 1.75rem; font-weight: 800; letter-spacing: -0.5px; color: #fff; margin-bottom: 2px; }
-        .header-main h2 { font-size: 0.9rem; font-weight: 600; color: #38bdf8; margin-bottom: 8px; }
-        .contact-grid { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 0.76rem; }
-        .contact-grid a, .contact-grid span { color: #cbd5e1; text-decoration: none; display: flex; align-items: center; gap: 5px; }
-        .contact-grid a:hover { color: #38bdf8; }
-        .header-avatar { width: 85px; height: 85px; border-radius: 50%; object-fit: cover; object-position: center top; background: #1e293b; border: 3px solid #38bdf8; box-shadow: 0 4px 12px rgba(0,0,0,0.25); margin-left: 15px; }
+        /* HEADER */
+        header { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 8px; color: #fff; padding: 14px 18px; margin-bottom: 10px; }
+        header h1 { font-size: 1.7rem; font-weight: 800; letter-spacing: -0.5px; line-height: 1.15; }
+        header .headline { font-size: 0.88rem; font-weight: 600; color: var(--sky); margin: 3px 0 8px; }
+        header .contact { display: flex; flex-wrap: wrap; gap: 3px 14px; font-size: 0.74rem; color: #cbd5e1; }
+        header .contact a { color: #cbd5e1; text-decoration: none; }
+        header .remote { margin-top: 7px; font-size: 0.74rem; color: #fff; font-weight: 500; }
+        header .remote strong { color: var(--sky); font-weight: 700; }
 
-        .summary-card {
-            background-color: var(--bg-light); border-left: 4px solid var(--brand-indigo);
-            padding: 8px 12px; border-radius: 0 6px 6px 0; font-size: 0.79rem;
-            color: var(--text-muted); margin-bottom: 12px; line-height: 1.45;
-            text-align: justify; text-justify: inter-word; hyphens: auto; -webkit-hyphens: auto;
-        }
-        .summary-card strong { color: var(--primary-navy); font-weight: 600; }
+        /* SECTIONS */
+        h2.section { font-size: 0.82rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.6px; color: var(--navy); border-bottom: 2px solid var(--line); padding-bottom: 2px; margin: 10px 0 6px; position: relative; }
+        h2.section::after { content: ''; position: absolute; left: 0; bottom: -2px; width: 46px; height: 2px; background: var(--sun); }
+        .summary { border-left: 4px solid var(--indigo); background: var(--soft); border-radius: 0 6px 6px 0; padding: 7px 12px; font-size: 0.79rem; color: var(--muted); line-height: 1.45; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+        .summary strong, li strong { color: var(--text); font-weight: 600; }
 
-        .layout-grid { display: grid; grid-template-columns: 2.1fr 1fr; gap: 16px; flex: 1; }
-        .left-col, .right-col { min-width: 0; }
+        .hl-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 8px; }
+        .hl-row div { border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; background: #fff; }
+        .hl-row b { display: block; font-size: 1.1rem; font-weight: 800; color: var(--indigo); line-height: 1.1; }
+        .hl-row span { display: block; font-size: 0.68rem; color: var(--muted); line-height: 1.3; }
+        .skills { display: grid; grid-template-columns: 165px 1fr; gap: 3px 10px; font-size: 0.77rem; }
+        .skills dt { font-weight: 700; color: var(--indigo); }
+        .skills dd { color: var(--text); }
 
-        .section-header {
-            font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
-            color: var(--primary-navy); border-bottom: 2px solid var(--border-color);
-            padding-bottom: 2px; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
-        }
-        .section-header i { color: var(--brand-indigo); }
+        .job { margin-bottom: 9px; }
+        .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+        .job-title { font-size: 0.9rem; font-weight: 700; color: var(--navy); }
+        .job-date { font-size: 0.74rem; font-weight: 600; color: var(--indigo); white-space: nowrap; }
+        .job-org { font-size: 0.78rem; color: var(--muted); font-weight: 500; margin-bottom: 2px; }
+        ul.bul { list-style: disc; margin-left: 15px; font-size: 0.78rem; color: var(--muted); }
+        ul.bul li { margin-bottom: 2px; }
 
-        .experience-item { margin-bottom: 10px; }
-        .company-bar { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 2px; }
-        .company-name { font-size: 0.92rem; font-weight: 700; color: var(--primary-navy); }
-        .company-name small { font-size: 0.7rem; font-weight: 500; color: var(--text-muted); }
-        .date-badge { font-size: 0.72rem; font-weight: 600; color: var(--brand-indigo); background: #eef2ff; padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
-        .role-wrapper { margin-top: 4px; padding-left: 8px; border-left: 2px solid var(--border-color); }
-        .role-wrapper.promoted { border-left-color: var(--brand-indigo); }
-        .role-title-bar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2px; }
-        .role-title { font-size: 0.84rem; font-weight: 700; color: var(--text-main); }
-        .role-date { font-size: 0.7rem; color: var(--text-muted); font-weight: 500; }
-        .promo-tag { font-size: 0.62rem; font-weight: 700; background: var(--accent-bg); color: var(--brand-indigo); border: 1px solid #bfdbfe; padding: 1px 4px; border-radius: 3px; margin-left: 4px; text-transform: uppercase; }
-        .award-banner { background-color: #f0fdf4; border-left: 3px solid #16a34a; padding: 4px 8px; margin: 4px 0; font-size: 0.75rem; color: #15803d; border-radius: 0 4px 4px 0; }
-        .bullet-list { list-style-type: disc; margin-left: 14px; font-size: 0.78rem; color: var(--text-muted); }
-        .bullet-list li { margin-bottom: 2px; }
-        .bullet-list li strong { color: var(--text-main); font-weight: 600; }
+        .item { margin-bottom: 5px; font-size: 0.78rem; }
+        .item .row { display: flex; justify-content: space-between; gap: 10px; }
+        .item .name { font-weight: 700; color: var(--navy); }
+        .item .when { color: var(--indigo); font-weight: 600; font-size: 0.74rem; white-space: nowrap; }
+        .item .sub { color: var(--muted); }
+        .item .sub a { color: var(--indigo); text-decoration: none; }
+        .plain { font-size: 0.78rem; color: var(--muted); margin-bottom: 3px; }
+        .plain strong { color: var(--text); font-weight: 700; }
 
-        .skill-group { margin-bottom: 7px; }
-        .skill-label { font-size: 0.68rem; font-weight: 700; color: var(--brand-indigo); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 3px; }
-        .skills-flex { display: flex; flex-wrap: wrap; gap: 4px; }
-        .skill-pill { background-color: var(--bg-light); border: 1px solid var(--border-color); color: var(--text-main); padding: 2px 6px; border-radius: 4px; font-size: 0.72rem; font-weight: 500; }
-
-        .sidebar-item { margin-bottom: 8px; }
-        .sidebar-item-title { font-size: 0.78rem; font-weight: 700; color: var(--primary-navy); }
-        .sidebar-item-sub { font-size: 0.72rem; color: var(--text-muted); }
-        .sidebar-note { font-size: 0.68rem; color: var(--brand-indigo); font-weight: 600; }
-
-        .project-card { background: var(--bg-light); border: 1px solid var(--border-color); border-radius: 6px; padding: 6px 8px; margin-bottom: 6px; }
-        .project-card h4 { font-size: 0.8rem; color: var(--primary-navy); display: flex; justify-content: space-between; align-items: center; }
-        .project-card h4 a { font-size: 0.72rem; color: var(--brand-indigo); text-decoration: none; white-space: nowrap; margin-left: 6px; }
-        .project-card p { font-size: 0.74rem; color: var(--text-muted); margin-top: 2px; }
-        .project-card .stack { font-size: 0.68rem; color: var(--brand-sky); font-weight: 600; margin-top: 2px; }
-
-        .page-number { font-size: 0.7rem; color: #94a3b8; font-weight: 600; text-align: right; margin-top: 6px; }
+        .page-number { font-size: 0.7rem; color: #94a3b8; font-weight: 600; text-align: right; margin-top: 4px; }
     </style>
 </head>
 <body>
 
-    <a class="back-btn no-print" href="https://mprantikk.github.io/"><i class="fa-solid fa-arrow-left"></i> Portfolio</a>
-
-    <button class="download-btn no-print" onclick="window.print()">
-        <i class="fa-solid fa-file-pdf"></i> Download PDF
-    </button>
+    <a class="back-btn no-print" href="https://mprantikk.github.io/">&larr; Portfolio</a>
+    <button class="download-btn no-print" onclick="window.print()">Download PDF</button>
 
     <!-- ================= PAGE 1 ================= -->
     <div class="resume-page">
         <div class="page-body">
             <header>
-                <div class="header-main">
-                    <h1>MD. MASUD PARVEJ</h1>
-                    <h2>Lead, Data Ops | Business Intelligence &amp; Data Analytics Leader</h2>
-                    <div class="contact-grid">
-                        <span><i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh</span>
-                        <span><i class="fa-solid fa-phone"></i> +880 1878 939548</span>
-                        <a href="mailto:mprantikk@gmail.com"><i class="fa-solid fa-envelope"></i> mprantikk@gmail.com</a>
-                        <a href="https://mprantikk.github.io" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> mprantikk.github.io</a>
-                        <a href="https://linkedin.com/in/mprantikk" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/mprantikk</a>
-                        <a href="https://github.com/mprantikk" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> github.com/mprantikk</a>
-                    </div>
+                <h1>MD. MASUD PARVEJ</h1>
+                <div class="headline">Lead, Data Ops | Business Intelligence &amp; Data Analytics | Revenue Analytics &amp; Automation</div>
+                <div class="contact">
+                    <span>Dhaka, Bangladesh (UTC+6)</span>
+                    <span>+880 1878 939548</span>
+                    <a href="mailto:mprantikk@gmail.com">mprantikk@gmail.com</a>
+                    <a href="https://linkedin.com/in/mprantikk">linkedin.com/in/mprantikk</a>
+                    <a href="https://github.com/mprantikk">github.com/mprantikk</a>
+                    <a href="https://mprantikk.github.io">mprantikk.github.io</a>
                 </div>
-                <img class="header-avatar" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBAUEBAYFBQUGBgYHCQ4JCQgICRINDQoOFRIWFhUSFBQXGiEcFxgfGRQUHScdHyIjJSUlFhwpLCgkKyEkJST/2wBDAQYGBgkICREJCREkGBQYJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCT/wAARCAFAAUADASIAAhEBAxEB/8QAHAABAAIDAQEBAAAAAAAAAAAAAAQFAgMGBwEI/8QAQRAAAQMCBAQEAwYEBAUFAQAAAQACAwQRBRIhMQYTQVEiYXGBBzKRFCNCobHBUtHh8BUkM2IIFlNy8SVDc4Kywv/EABkBAQADAQEAAAAAAAAAAAAAAAABAgMEBf/EACcRAQEAAgICAgICAQUAAAAAAAABAhEDIRIxBEETUSIyFEJScZHw/9oADAMBAAIRAxEAPwDwpERd7mEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERARLEgnoOqkR0zGuIqpvswH8Tbk+VtFFuhHRbaiEwBpI8L9nFzbHXvdZR0ckjHPyuDBpfwnXtuo8onVaEW2Omkla50bS4M1dbcDv6LW5pabEWU7Q+IiKQREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAWEkrIXMa+93HQAarGol5MYIF3uNmhYmqjomcyTO6rzaBw8DRoQ4Efi39FTLLSZE84s2ha+CozNjsfumAXPYHqNdd1WyYhSyzCQNmBOpc43/r9SoEr3STOlfIXl5Li4nUk7oGtBJuNdr6LNd0lPJDO0SxV8cEjhYNiux8hJtbci621eGQUv3mKRYq+YauDmhzbHoS4gk+YVVhOIOoCQ1sbS/QytfZ4H+3srx+HS4vQyVUT6h1PGNZKl2fL6HNc/3orSI2rsNroqGs+10ckUEsZPgd+IdrHTXyK67Dqqgr2OjqqAOic0u5gjuGXG2mosfUdiF53FDTisEczHStvqIjYnzG+vupkmLTUET46eKmha5oblaw2kb/ABNcTm99LqZf2adO3heCve5l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" alt="Md. Masud Parvej">
+                <div class="remote"><strong>Open to remote roles worldwide.</strong> Flexible with time zones.</div>
             </header>
 
-            <div class="summary-card">
-                Business Intelligence and Data Analytics leader with <strong>6+ years</strong> across <strong>healthcare technology (RCM), logistics, e-commerce, and FMCG</strong>. At Commure, built revenue benchmarking from scratch and, as <strong>Lead, Data Ops</strong>, work across three pods (Revenue Benchmarking, Rev Ops, Launch QBR). Turns business requirements into <strong>executive dashboards, automated reporting, and revenue and financial analytics</strong> that support senior management. Results include <strong>~60% less manual work through automation</strong>, 20% higher productivity, and 15% higher HR data accuracy. PL-300 certified; pursuing an M.Sc. in Data Science &amp; Analytics.
+            <h2 class="section">Professional Summary</h2>
+            <div class="summary">
+                Business Intelligence and Data Operations leader with <strong>6+ years</strong> across healthcare technology (RCM), logistics, e-commerce, and FMCG. I turn business requirements into executive dashboards, automated reporting, and revenue and financial analytics. Currently Lead, Data Ops at Commure, working across three pods (Revenue Benchmarking, Rev Ops, Launch QBR). PL-300 certified; pursuing an M.Sc. in Data Science &amp; Analytics.
+            </div>
+            <div class="hl-row">
+                <div><b>~60%</b><span>less manual work after automating benchmarking at Commure</span></div>
+                <div><b>100+ reports</b><span>and 8+ key-metric dashboards built at Porter</span></div>
+                <div><b>40%</b><span>data management gain from the Grameen Danone Sales App</span></div>
+                <div><b>15%</b><span>higher HR data accuracy at ShopUp</span></div>
             </div>
 
-            <div class="layout-grid">
-                <div class="left-col">
-                    <div class="section-header"><i class="fa-solid fa-briefcase"></i> Professional Experience</div>
+            <h2 class="section">Core Skills</h2>
+            <dl class="skills">
+                <dt>Analytics &amp; BI</dt><dd>Executive Reporting · Revenue &amp; Financial Analytics · KPI Dashboards · Decision Support</dd>
+                <dt>Databases &amp; Languages</dt><dd>PostgreSQL · MS SQL Server · Snowflake · SQL · Python</dd>
+                <dt>Reporting &amp; Visualization</dt><dd>Power BI (PL-300) · DAX · Tableau · Metabase · Advanced Excel (VBA)</dd>
+                <dt>Automation &amp; Data Ops</dt><dd>Workflow Automation · Retool · Data Governance · Data Quality · Process Optimization</dd>
+                <dt>Leadership &amp; Strategy</dt><dd>Team Leadership · Stakeholder Management · Cross-functional Teams · Agile Analytics</dd>
+                <dt>Platforms &amp; Tools</dt><dd>Google Cloud (GCP) · Notion · Linear · HRIS (TalentX)</dd>
+            </dl>
 
-                    <div class="experience-item">
-                        <div class="company-bar">
-                            <span class="company-name">Commure <small>| Healthcare Technology (RCM)</small></span>
-                            <span class="date-badge">Jan 2025 – Present</span>
-                        </div>
+            <h2 class="section">Professional Experience</h2>
 
-                        <div class="role-wrapper promoted">
-                            <div class="role-title-bar">
-                                <span class="role-title">Lead, Data Ops</span>
-                            </div>
-                            <ul class="bullet-list">
-                                <li>Took over <strong>revenue benchmarking from scratch</strong> and, with a 3-member team, built the processes, QA measures, system configuration, and data operations structure for benchmarking and analytics.</li>
-                                <li>Developed historical data analytics and automated data cleaning and benchmark creation, <strong>cutting manual work by almost 60%</strong> (EHR data scraping, Python-based cleaning in VS Code, GPT-assisted QA).</li>
-                                <li>Work across <strong>three pods</strong>: Revenue Benchmarking, Rev Ops, and Launch QBR.</li>
-                                <li>Measure business performance through data to help the launch team <strong>identify trends and improve customer satisfaction, profitability, and product growth</strong>.</li>
-                                <li>Raised data quality through validation protocols and governance standards; partner with Engineering to debug EHR and operational datasets and resolve cross-system inconsistencies.</li>
-                                <li>Built scalable dashboards with <strong>PostgreSQL, Snowflake, Power BI, and Advanced Excel (VBA)</strong>; automated workflows with Retool, Notion, and Linear.</li>
-                                <li>Led cross-functional teams in <strong>Revenue Cycle Management (RCM)</strong> and financial data analytics, analyzing trends to support strategic initiatives.</li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="job">
+                <div class="job-head"><span class="job-title">Lead, Data Ops</span><span class="job-date">Jan 2025 – Present</span></div>
+                <div class="job-org">Commure | Healthcare Technology (Revenue Cycle Management)</div>
+                <ul class="bul">
+                    <li>Took over revenue benchmarking from scratch and, with a 3-member team, built the processes, QA measures, system configuration, and data operations structure for benchmarking and analytics.</li>
+                    <li>Built historical data analytics and automated data cleaning and benchmark creation (EHR data scraping, Python, GPT-assisted QA). This cut manual work by <strong>almost 60%</strong> and improved data quality.</li>
+                    <li>Work across three pods (Revenue Benchmarking, Rev Ops, Launch QBR), measuring business performance and helping the launch team spot trends that improve customer satisfaction, profitability, and product growth.</li>
+                    <li>Work with Engineering to debug EHR and operational datasets and fix cross-system inconsistencies. Set up validation checks and governance standards.</li>
+                    <li>Built dashboards with PostgreSQL, Snowflake, Power BI, and Advanced Excel (VBA). Automated team workflows with Retool, Notion, and Linear.</li>
+                    <li>Led cross-functional teams on Revenue Cycle Management (RCM) and financial data analytics, and analyzed financial trends for strategic initiatives.</li>
+                </ul>
+            </div>
 
-                    <div class="experience-item">
-                        <div class="company-bar">
-                            <span class="company-name">Porter <small>| Logistics</small></span>
-                            <span class="date-badge">Jul 2024 – Jan 2025</span>
-                        </div>
-                        <div class="role-wrapper">
-                            <div class="role-title-bar"><span class="role-title">Senior Data Analyst</span></div>
-                            <ul class="bullet-list">
-                                <li>Worked with management to prioritize core business needs and align analytics initiatives with organizational goals.</li>
-                                <li>Designed and managed <strong>stakeholder reporting suites</strong> that supplied critical insights for business decisions.</li>
-                                <li>Presented executive reports on patterns, trends, and predictive analyses to support strategic planning.</li>
-                                <li>Defined and documented Business-As-Usual (BAU) requirements to ensure operational continuity.</li>
-                                <li>Maintained primary and secondary data sources with routine quality checks to preserve database accuracy.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="right-col">
-                    <div class="section-header"><i class="fa-solid fa-layer-group"></i> Core Competencies</div>
-                    <div class="skill-group"><div class="skill-label">Analytics &amp; Business Intelligence</div><div class="skills-flex"><span class="skill-pill">Executive Reporting</span><span class="skill-pill">Revenue Analytics</span><span class="skill-pill">Financial Analytics</span><span class="skill-pill">Decision Support</span></div></div>
-                    <div class="skill-group"><div class="skill-label">Database &amp; SQL</div><div class="skills-flex"><span class="skill-pill">PostgreSQL</span><span class="skill-pill">MS SQL Server</span><span class="skill-pill">Snowflake</span></div></div>
-                    <div class="skill-group"><div class="skill-label">Reporting &amp; Visualization</div><div class="skills-flex"><span class="skill-pill">Power BI</span><span class="skill-pill">DAX</span><span class="skill-pill">Tableau</span><span class="skill-pill">Metabase</span><span class="skill-pill">Advanced Excel (VBA)</span></div></div>
-                    <div class="skill-group"><div class="skill-label">Automation &amp; Data Operations</div><div class="skills-flex"><span class="skill-pill">Retool</span><span class="skill-pill">Workflow Automation</span><span class="skill-pill">Data Governance</span></div></div>
-                    <div class="skill-group"><div class="skill-label">Leadership &amp; Strategy</div><div class="skills-flex"><span class="skill-pill">Team Leadership</span><span class="skill-pill">Stakeholder Management</span><span class="skill-pill">Agile Analytics</span></div></div>
-                    <div class="skill-group" style="margin-bottom: 10px;"><div class="skill-label">Tools &amp; Platforms</div><div class="skills-flex"><span class="skill-pill">Google Cloud (GCP)</span><span class="skill-pill">Python</span><span class="skill-pill">HRIS / TalentX</span></div></div>
-                    <div class="section-header"><i class="fa-solid fa-graduation-cap"></i> Education</div>
-                    <div class="sidebar-item">
-                        <div class="sidebar-item-title">M.Sc. in Data Science &amp; Analytics</div>
-                        <div class="sidebar-item-sub">East West University</div>
-                        <div class="sidebar-note">Currently Pursuing</div>
-                    </div>
-                    <div class="sidebar-item" style="margin-bottom: 12px;">
-                        <div class="sidebar-item-title">B.Sc. in Electrical &amp; Electronic Engineering</div>
-                        <div class="sidebar-item-sub">United International University (2018)</div>
-                        <div class="sidebar-item-sub">CGPA: 3.12 / 4.00</div>
-                    </div>
-                </div>
+            <div class="job">
+                <div class="job-head"><span class="job-title">Senior Data Analyst</span><span class="job-date">Jul 2024 – Jan 2025</span></div>
+                <div class="job-org">Porter | Logistics</div>
+                <ul class="bul">
+                    <li>Built <strong>8+</strong> key-metric dashboards and <strong>100+</strong> reports used by the sales, leadership, finance, and marketing teams to track performance and make decisions.</li>
+                    <li>Worked with management to set analytics priorities based on core business needs.</li>
+                    <li>Presented executive reports on trends and predictive analyses for planning.</li>
+                    <li>Defined and documented Business-As-Usual (BAU) requirements and ran regular quality checks on primary and secondary data sources.</li>
+                </ul>
             </div>
         </div>
         <div class="page-number">Page 1 of 2</div>
@@ -243,146 +173,77 @@
     <!-- ================= PAGE 2 ================= -->
     <div class="resume-page">
         <div class="page-body">
-            <div class="layout-grid">
-                <div class="left-col">
-                    <div class="section-header"><i class="fa-solid fa-briefcase"></i> Professional Experience (Continued)</div>
+            <h2 class="section" style="margin-top: 0;">Professional Experience (Continued)</h2>
 
-                    <div class="experience-item">
-                        <div class="company-bar">
-                            <span class="company-name">ShopUp <small>| E-commerce &amp; Fintech</small></span>
-                            <span class="date-badge">Feb 2022 – Jul 2024</span>
-                        </div>
-                        <div class="role-wrapper">
-                            <div class="role-title-bar"><span class="role-title">Automation &amp; Analytics Expert</span></div>
-                            <div class="award-banner">Optimized the HRIS (TalentX), achieving a <strong>15% increase in system data accuracy</strong>.</div>
-                            <ul class="bullet-list">
-                                <li>Implemented automation initiatives across HR processes, improving operational efficiency.</li>
-                                <li>Analyzed HR and revenue data to deliver strategic, data-driven recommendations to management.</li>
-                                <li>Established data governance protocols that protected HR data integrity and security.</li>
-                                <li>Designed and executed performance appraisal systems that produced actionable insights for employee development.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="company-bar">
-                            <span class="company-name">Grameen Danone Foods Limited <small>| FMCG</small></span>
-                            <span class="date-badge">Dec 2020 – Jan 2022</span>
-                        </div>
-                        <div class="role-wrapper">
-                            <div class="role-title-bar"><span class="role-title">Business Intelligence Executive</span></div>
-                            <div class="award-banner">Led Sales App development, delivering a <strong>40% data management gain</strong> and <strong>30% expansion in product portfolio</strong>.</div>
-                            <ul class="bullet-list">
-                                <li>Used Power BI, SQL, and Excel for strategic analysis, <strong>boosting operational productivity by 20%</strong>.</li>
-                                <li>Led development and maintenance of a custom Sales App to streamline data management and analysis.</li>
-                                <li>Supported business strategy, operations, and cross-departmental growth through advanced data analysis.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="experience-item">
-                        <div class="company-bar">
-                            <span class="company-name">Mind Mapper Bangladesh</span>
-                            <span class="date-badge">Dec 2019 – Dec 2020</span>
-                        </div>
-                        <div class="role-wrapper">
-                            <div class="role-title-bar"><span class="role-title">Business Development Specialist</span></div>
-                            <ul class="bullet-list">
-                                <li>Led the transition of operations and training programs from offline to online, introducing digital processes.</li>
-                                <li>Planned and executed marketing initiatives to strengthen sales management and business growth.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="section-header" style="margin-top: 8px;"><i class="fa-solid fa-flask"></i> Research &amp; Publications</div>
-                    <div class="project-card">
-                        <h4>Insight Quality Evaluation (IQE) Framework <a href="paper.html" target="_blank" rel="noopener">View Paper <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
-                        <p><strong>Beyond the Dashboard.</strong> A four-dimension model for judging AI-generated BI insights: <em>Statistical Validity, Contextual Relevance, Novelty, Actionability</em>.</p>
-                    </div>
-
-                    <div class="section-header" style="margin-top: 8px;"><i class="fa-solid fa-code-branch"></i> Key Projects</div>
-                    <div class="project-card">
-                        <h4>RCM Revenue Benchmarking <a href="https://github.com/mprantikk/rcm-revenue-benchmarking" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
-                        <p>Analytical benchmarking pipeline tracking healthcare RCM collection rates and claim metrics.</p>
-                        <div class="stack">Python | PostgreSQL</div>
-                    </div>
-                    <div class="project-card">
-                        <h4>SQL Revenue Analytics <a href="https://github.com/mprantikk/sql-revenue-analytics" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></h4>
-                        <p>PostgreSQL suite for BI, customer segmentation, and data-integrity checks.</p>
-                        <div class="stack">PostgreSQL | SQL</div>
-                    </div>
-                    <div class="project-card">
-                        <h4>Perfexio: Performance Management SaaS <span><a href="https://staging-perfexio-demo.web.app/" target="_blank" rel="noopener">Demo</a> · <a href="https://github.com/mprantikk/perfexio-saas" target="_blank" rel="noopener">GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i></a></span></h4>
-                        <p>Multi-tenant platform for OKR goals, manager reviews, culture scoring, and leadership dashboards.</p>
-                        <div class="stack">JavaScript | Firebase | Chart.js</div>
-                    </div>
-                </div>
-
-                <div class="right-col">
-                    <div class="section-header"><i class="fa-solid fa-certificate"></i> Professional Certifications</div>
-                    <div class="sidebar-item">
-                        <div class="sidebar-item-title">Power BI Data Analyst (PL-300)</div>
-                        <div class="sidebar-item-sub">Microsoft Certified Associate | Mar 2023</div>
-                    </div>
-                    <div class="sidebar-item">
-                        <div class="sidebar-item-title">Agile Analytics (ICP-A)</div>
-                        <div class="sidebar-item-sub">ICAgile Certified Professional | Oct 2024</div>
-                    </div>
-                    <div class="sidebar-item">
-                        <div class="sidebar-item-title">Certified Supply Chain Analyst (CSCA)</div>
-                        <div class="sidebar-item-sub">ISCEA Bangladesh | 100% Scholarship Recipient</div>
-                    </div>
-                    <div class="sidebar-item" style="margin-bottom: 12px;">
-                        <div class="sidebar-item-title">MOS: Excel Expert</div>
-                        <div class="sidebar-item-sub">Microsoft Certified | Jun 2020</div>
-                    </div>
-
-                    <div class="section-header"><i class="fa-solid fa-chalkboard-user"></i> Courses &amp; Specializations</div>
-                    <div class="sidebar-item">
-                        <div class="sidebar-item-title">Big Data &amp; Machine Learning</div>
-                        <div class="sidebar-item-sub">Google Cloud (GCP) | May 2025</div>
-                    </div>
-                    <div class="sidebar-item">
-                        <div class="sidebar-item-title">Google Data Analytics Professional</div>
-                        <div class="sidebar-item-sub">Google (Coursera) | Jun 2023</div>
-                    </div>
-                    <div class="sidebar-item">
-                        <div class="sidebar-item-title">Data Governance &amp; Stewardship</div>
-                        <div class="sidebar-item-sub">University of Washington | May 2023</div>
-                    </div>
-                    <div class="sidebar-item" style="margin-bottom: 12px;">
-                        <div class="sidebar-item-title">IBM Data Analytics Professional</div>
-                        <div class="sidebar-item-sub">IBM (Coursera) | Aug 2022</div>
-                    </div>
-
-                    <div class="section-header"><i class="fa-solid fa-book-open"></i> Self-Development</div>
-                    <ul class="bullet-list" style="margin-left: 12px; margin-bottom: 12px;">
-                        <li>Data Strategy for Leaders (LinkedIn)</li>
-                        <li>Leading Data &amp; Analytics Teams</li>
-                        <li>Data Governance Foundations (DAMA)</li>
-                        <li>Agile Project Management for Analytics</li>
-                        <li>Effective Stakeholder Communication</li>
-                    </ul>
-
-                    <div class="section-header"><i class="fa-solid fa-award"></i> Featured Awards</div>
-                    <div class="award-banner" style="margin-bottom: 4px;">
-                        <strong>Star Achiever Award</strong><br>ShopUp | Q1 &amp; Q2 2023
-                    </div>
-                    <div class="award-banner">
-                        <strong>Commando Award</strong><br>Grameen Danone Foods | 2021
-                    </div>
-
-                    <div class="section-header"><i class="fa-solid fa-language"></i> Languages</div>
-                    <div style="font-size: 0.76rem; color: var(--text-muted);">
-                        <strong>Bengali:</strong> Native<br>
-                        <strong>English:</strong> Fluent
-                    </div>
-                </div>
+            <div class="job">
+                <div class="job-head"><span class="job-title">Automation &amp; Analytics Expert</span><span class="job-date">Feb 2022 – Jul 2024</span></div>
+                <div class="job-org">ShopUp | E-commerce &amp; Fintech</div>
+                <ul class="bul">
+                    <li>Improved HRIS (TalentX) data accuracy by <strong>15%</strong>.</li>
+                    <li>Automated HR processes to improve operational efficiency.</li>
+                    <li>Analyzed HR and revenue data and gave management clear recommendations.</li>
+                    <li>Set up data governance rules to protect HR data integrity and security. Designed and ran performance appraisal systems that gave useful insight for employee development.</li>
+                </ul>
             </div>
+
+            <div class="job">
+                <div class="job-head"><span class="job-title">Business Intelligence Executive</span><span class="job-date">Dec 2020 – Jan 2022</span></div>
+                <div class="job-org">Grameen Danone Foods Limited | FMCG</div>
+                <ul class="bul">
+                    <li>Led development of a custom Sales App that brought a <strong>40%</strong> gain in data management and a <strong>30%</strong> expansion in product portfolio.</li>
+                    <li>Used Power BI, SQL, and Excel for analysis that raised operational productivity by <strong>20%</strong>.</li>
+                    <li>Supported business strategy, operations, and cross-department growth with data analysis.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-head"><span class="job-title">Business Development Specialist</span><span class="job-date">Dec 2019 – Dec 2020</span></div>
+                <div class="job-org">Mind Mapper Bangladesh</div>
+                <ul class="bul">
+                    <li>Moved operations and training programs from offline to online.</li>
+                    <li>Planned and ran marketing initiatives to support sales and growth.</li>
+                </ul>
+            </div>
+
+            <h2 class="section">Projects &amp; Research</h2>
+            <div class="item">
+                <div class="row"><span class="name">Perfexio: Performance Management SaaS</span><span class="when">JavaScript · Firebase · Chart.js</span></div>
+                <div class="sub">Multi-tenant platform for OKR goals, manager reviews, culture scoring, and dashboards. One weighted score per person: goals 50%, manager review 40%, culture 10%. <a href="https://github.com/mprantikk/perfexio-saas">GitHub</a> · <a href="https://staging-perfexio-demo.web.app/">Live demo</a></div>
+            </div>
+            <div class="item">
+                <div class="row"><span class="name">RCM Revenue Benchmarking</span><span class="when">Python · PostgreSQL</span></div>
+                <div class="sub">Benchmarking pipeline tracking healthcare RCM collection rates, claim denials, and clean claim metrics. <a href="https://github.com/mprantikk/rcm-revenue-benchmarking">GitHub</a></div>
+            </div>
+            <div class="item">
+                <div class="row"><span class="name">SQL Revenue Analytics</span><span class="when">PostgreSQL · SQL</span></div>
+                <div class="sub">PostgreSQL suite for BI, customer segmentation, and data-integrity checks. <a href="https://github.com/mprantikk/sql-revenue-analytics">GitHub</a></div>
+            </div>
+            <div class="item">
+                <div class="row"><span class="name">Insight Quality Evaluation (IQE) Framework</span><span class="when">Independent research</span></div>
+                <div class="sub">"Beyond the Dashboard": a four-dimension model for judging AI-generated BI insights (Statistical Validity, Contextual Relevance, Novelty, Actionability). <a href="https://mprantikk.github.io/#research">Read paper</a></div>
+            </div>
+
+            <h2 class="section">Education</h2>
+            <div class="item" style="margin-bottom: 3px;">
+                <div class="row"><span><span class="name">M.Sc. in Data Science &amp; Analytics</span> <span class="sub">| East West University, Dhaka</span></span><span class="when">Expected June 2028</span></div>
+            </div>
+            <div class="item" style="margin-bottom: 0;">
+                <div class="row"><span><span class="name">B.Sc. in Electrical &amp; Electronic Engineering</span> <span class="sub">| United International University | CGPA 3.12/4.00</span></span><span class="when">2018</span></div>
+            </div>
+
+            <h2 class="section">Certifications &amp; Training</h2>
+            <p class="plain"><strong>Professional certifications:</strong> Microsoft Certified: Power BI Data Analyst Associate, PL-300 (Mar 2023) · ICAgile Certified Professional, Agile Analytics, ICP-A (Oct 2024) · Certified Supply Chain Analyst, CSCA, ISCEA · Microsoft Office Specialist: Excel Expert (Jun 2020)</p>
+            <p class="plain"><strong>Courses:</strong> Google Data Analytics Professional Certificate (Coursera, Jun 2023) · IBM Data Analytics Professional Certificate (Coursera, Aug 2022) · Big Data &amp; Machine Learning, Google Cloud (May 2025) · Data Governance &amp; Stewardship, University of Washington (May 2023)</p>
+            <p class="plain"><strong>Self-development:</strong> Data Strategy for Leaders · Leading Data &amp; Analytics Teams (LinkedIn Learning) · Data Governance Foundations (DAMA) · Effective Stakeholder Communication</p>
+
+            <h2 class="section">Awards &amp; Recognition</h2>
+            <p class="plain"><strong>Star Achiever Award</strong>, ShopUp (Q1 &amp; Q2 2023) · <strong>Commando Award</strong>, Grameen Danone Foods (2021), for raising operational productivity by 20%</p>
+
+            <h2 class="section">Languages</h2>
+            <p class="plain"><strong>Bengali:</strong> Native · <strong>English:</strong> Fluent</p>
         </div>
         <div class="page-number">Page 2 of 2</div>
     </div>
-
 
 </body>
 </html>
