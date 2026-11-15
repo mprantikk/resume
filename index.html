@@ -32,7 +32,7 @@
         .download-btn:hover { background: #1a37c8; transform: translateY(-1px); }
         .back-btn { left: 20px; background: var(--navy); }
         .back-btn:hover { background: #1e293b; transform: translateY(-1px); }
-        .embedded .back-btn { display: none; }
+        .embedded .back-btn, .embedded .download-btn { display: none; }
         .embedded body { background: transparent; padding: 0; }
 
         @page { size: A4 portrait; margin: 0; }
@@ -125,10 +125,10 @@
                 Business Intelligence and Data Operations leader with <strong>6+ years</strong> across healthcare technology (RCM), logistics, e-commerce, and FMCG. I turn business requirements into executive dashboards, automated reporting, and revenue and financial analytics. Currently Lead, Data Ops at Commure, working across three pods (Revenue Benchmarking, Rev Ops, Launch QBR). PL-300 certified; pursuing an M.Sc. in Data Science &amp; Analytics.
             </div>
             <div class="hl-row">
-                <div><b>~60%</b><span>less manual work after automating benchmarking at Commure</span></div>
+                <div><b>24h &rarr; 5h</b><span>to benchmark one site at Commure</span></div>
+                <div><b>98%</b><span>of QA runs without errors (Retool and Firebase panels)</span></div>
                 <div><b>100+ reports</b><span>and 8+ key-metric dashboards built at Porter</span></div>
                 <div><b>40%</b><span>data management gain from the Grameen Danone Sales App</span></div>
-                <div><b>15%</b><span>higher HR data accuracy at ShopUp</span></div>
             </div>
 
             <h2 class="section">Core Skills</h2>
@@ -147,12 +147,12 @@
                 <div class="job-head"><span class="job-title">Lead, Data Ops</span><span class="job-date">Jan 2025 – Present</span></div>
                 <div class="job-org">Commure | Healthcare Technology (Revenue Cycle Management)</div>
                 <ul class="bul">
-                    <li>Took over revenue benchmarking from scratch and, with a 3-member team, built the processes, QA measures, system configuration, and data operations structure for benchmarking and analytics.</li>
-                    <li>Built historical data analytics and automated data cleaning and benchmark creation (EHR data scraping, Python, GPT-assisted QA). This cut manual work by <strong>almost 60%</strong> and improved data quality.</li>
-                    <li>Work across three pods (Revenue Benchmarking, Rev Ops, Launch QBR), measuring business performance and helping the launch team spot trends that improve customer satisfaction, profitability, and product growth.</li>
+                    <li>Took over revenue benchmarking from scratch and, with a 3-member team, built the processes, QA measures, system configuration, data operations structure, and historical analytics.</li>
+                    <li>Cut the time to benchmark one site from <strong>24 man hours</strong> (3 working days) to <strong>5</strong> (under one day), and removed almost 60% of manual tasks, through EHR data scraping, Python cleaning, and GPT-assisted QA.</li>
+                    <li>Replaced fully manual QA (EHR data, extracted data, and benchmarking insights checked by hand) with a Retool integrity-check failure panel and a Firebase-hosted review panel. About <strong>98%</strong> of QA now runs without errors.</li>
+                    <li>Work across three pods (Revenue Benchmarking, Rev Ops, Launch QBR), tracking business performance and helping the launch team spot trends that lift customer satisfaction, profitability, and growth.</li>
                     <li>Work with Engineering to debug EHR and operational datasets and fix cross-system inconsistencies. Set up validation checks and governance standards.</li>
-                    <li>Built dashboards with PostgreSQL, Snowflake, Power BI, and Advanced Excel (VBA). Automated team workflows with Retool, Notion, and Linear.</li>
-                    <li>Led cross-functional teams on Revenue Cycle Management (RCM) and financial data analytics, and analyzed financial trends for strategic initiatives.</li>
+                    <li>Built dashboards in PostgreSQL, Snowflake, Power BI, and Advanced Excel (VBA); automated team workflows in Retool, Notion, and Linear; led cross-functional teams on RCM and financial data analytics.</li>
                 </ul>
             </div>
 
@@ -160,10 +160,10 @@
                 <div class="job-head"><span class="job-title">Senior Data Analyst</span><span class="job-date">Jul 2024 – Jan 2025</span></div>
                 <div class="job-org">Porter | Logistics</div>
                 <ul class="bul">
-                    <li>Built <strong>8+</strong> key-metric dashboards and <strong>100+</strong> reports used by the sales, leadership, finance, and marketing teams to track performance and make decisions.</li>
-                    <li>Worked with management to set analytics priorities based on core business needs.</li>
-                    <li>Presented executive reports on trends and predictive analyses for planning.</li>
-                    <li>Defined and documented Business-As-Usual (BAU) requirements and ran regular quality checks on primary and secondary data sources.</li>
+                    <li>Built <strong>8+</strong> key-metric dashboards and <strong>100+</strong> reports used by the sales, leadership, finance, and marketing teams.</li>
+                    <li>The insights improved sales force performance, area-wise traffic and orders, and forecast accuracy, and made incentive design and new-category planning easier.</li>
+                    <li>Worked with management to set analytics priorities and presented executive reports on trends and predictive analyses.</li>
+                    <li>Documented Business-As-Usual (BAU) requirements and ran regular quality checks on primary and secondary data sources.</li>
                 </ul>
             </div>
         </div>
@@ -245,5 +245,10 @@
         <div class="page-number">Page 2 of 2</div>
     </div>
 
+<script>
+    if (/[?&]download=1/.test(location.search) && window.top === window.self) {
+        (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { setTimeout(function () { window.print(); }, 500); });
+    }
+</script>
 </body>
 </html>
