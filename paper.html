@@ -3,17 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Insight Quality Evaluation Framework - Preview</title>
+  <title>Beyond the Dashboard: Insight Quality Evaluation (IQE) Framework | Md Masud Parvej</title>
   <!-- PDF.js Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 
   <style>
-    /* Prevent text selection and browser actions */
     * {
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -52,8 +47,9 @@
       max-width: 70%;
     }
 
+    a.badge { text-decoration: none; }
     .badge {
-      background-color: #ef4444;
+      background-color: #2145f5;
       color: white;
       font-size: 0.65rem;
       padding: 4px 6px;
@@ -87,35 +83,7 @@
       height: auto;
     }
 
-    /* Watermark Overlay */
-    .watermark-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      z-index: 20;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    .watermark-text {
-      font-size: 8vw; /* Responsive font sizing for mobile & desktop */
-      font-weight: 900;
-      color: rgba(220, 38, 38, 0.18);
-      transform: rotate(-35deg);
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      white-space: nowrap;
-    }
-
     @media (min-width: 768px) {
-      .watermark-text {
-        font-size: 3.5rem;
-      }
       .viewer-header h3 {
         font-size: 0.95rem;
         max-width: 100%;
@@ -126,20 +94,14 @@
       }
     }
 
-    /* Disable Printing */
-    @media print {
-      body {
-        display: none !important;
-      }
-    }
   </style>
 </head>
-<body oncontextmenu="return false;">
+<body>
 
   <!-- Top Info Header Bar -->
   <div class="viewer-header">
-    <h3>IQE Framework — Paper Preview</h3>
-    <span class="badge">NON-PRINTABLE</span>
+    <h3>Beyond the Dashboard: Insight Quality Evaluation (IQE) Framework</h3>
+    <a class="badge" href="https://github.com/mprantikk/ai-insight-quality-evaluation/raw/main/Insight_Quality_Evaluation_Framework_Formatted.pdf" target="_blank" rel="noopener">Open PDF</a>
   </div>
 
   <!-- PDF Renderer Container -->
@@ -149,16 +111,6 @@
     const url = 'https://raw.githubusercontent.com/mprantikk/ai-insight-quality-evaluation/main/Insight_Quality_Evaluation_Framework_Formatted.pdf';
 
     pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-    // Prevent key shortcuts
-    document.addEventListener('keydown', function (e) {
-      if ((e.ctrlKey || e.metaKey) && (e.key === 'p' || e.key === 's' || e.key === 'c' || e.key === 'u')) {
-        e.preventDefault();
-      }
-      if (e.key === 'F12') {
-        e.preventDefault();
-      }
-    });
 
     // Render PDF adaptively
     pdfjsLib.getDocument(url).promise.then(pdf => {
@@ -194,12 +146,7 @@
             ? [outputScale, 0, 0, outputScale, 0, 0] 
             : null;
 
-          const watermarkDiv = document.createElement('div');
-          watermarkDiv.className = 'watermark-overlay';
-          watermarkDiv.innerHTML = '<div class="watermark-text">CONFIDENTIAL PREVIEW</div>';
-
           pageDiv.appendChild(canvas);
-          pageDiv.appendChild(watermarkDiv);
           wrapper.appendChild(pageDiv);
 
           const renderContext = {
@@ -212,7 +159,7 @@
       }
     }).catch(err => {
       console.error('Error loading PDF:', err);
-      document.getElementById('pdf-render-wrapper').innerHTML = '<p style="color:white; margin-top:40px;">Error loading document viewer.</p>';
+      document.getElementById('pdf-render-wrapper').innerHTML = '<p style="color:white; margin-top:40px;">Could not load the viewer. <a style="color:#8aa2ff" href="https://github.com/mprantikk/ai-insight-quality-evaluation/raw/main/Insight_Quality_Evaluation_Framework_Formatted.pdf">Open the PDF directly.</a></p>';
     });
   </script>
 </body>
