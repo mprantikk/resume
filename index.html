@@ -134,11 +134,11 @@
             <h2 class="section">Core Skills</h2>
             <dl class="skills">
                 <dt>Analytics &amp; BI</dt><dd>Executive Reporting · Revenue &amp; Financial Analytics · KPI Dashboards · Decision Support</dd>
-                <dt>Databases &amp; Languages</dt><dd>PostgreSQL · MS SQL Server · Snowflake · SQL · Python</dd>
+                <dt>Databases &amp; Languages</dt><dd>PostgreSQL · MS SQL Server · Snowflake · SQL · Python · dbt · Apache Airflow</dd>
                 <dt>Reporting &amp; Visualization</dt><dd>Power BI (PL-300) · DAX · Tableau · Metabase · Advanced Excel (VBA)</dd>
                 <dt>Automation &amp; Data Ops</dt><dd>Workflow Automation · Retool · Data Governance · Data Quality · Process Optimization</dd>
                 <dt>Leadership &amp; Strategy</dt><dd>Team Leadership · Stakeholder Management · Cross-functional Teams · Agile Analytics</dd>
-                <dt>Platforms &amp; Tools</dt><dd>Google Cloud (GCP) · Notion · Linear · HRIS (TalentX)</dd>
+                <dt>Platforms &amp; Tools</dt><dd>Google Cloud (GCP) · Docker · GitHub Actions (CI) · Notion · Linear · HRIS (TalentX)</dd>
             </dl>
 
             <h2 class="section">Professional Experience</h2>
@@ -200,27 +200,38 @@
                 <div class="job-head"><span class="job-title">Business Development Specialist</span><span class="job-date">Dec 2019 – Dec 2020</span></div>
                 <div class="job-org">Mind Mapper Bangladesh</div>
                 <ul class="bul">
-                    <li>Moved operations and training programs from offline to online.</li>
-                    <li>Planned and ran marketing initiatives to support sales and growth.</li>
+                    <li>Moved operations and training programs online and ran marketing initiatives for sales growth.</li>
                 </ul>
             </div>
 
-            <h2 class="section">Projects &amp; Research</h2>
+            <h2 class="section">Projects &amp; Research <span style="font-weight:500;text-transform:none;letter-spacing:0;color:var(--muted)">· all tested in CI · github.com/mprantikk</span></h2>
             <div class="item">
                 <div class="row"><span class="name">Perfexio: Performance Management SaaS</span><span class="when">JavaScript · Firebase · Chart.js</span></div>
-                <div class="sub">Multi-tenant platform for OKR goals, manager reviews, culture scoring, and dashboards. One weighted score per person: goals 50%, manager review 40%, culture 10%. <a href="https://github.com/mprantikk/perfexio-saas">GitHub</a> · <a href="https://staging-perfexio-demo.web.app/">Live demo</a></div>
+                <div class="sub">Multi-tenant OKR, manager review, and culture-scoring platform with leadership dashboards. <a href="https://github.com/mprantikk/perfexio-saas">GitHub</a> · <a href="https://staging-perfexio-demo.web.app/">Live demo</a></div>
             </div>
             <div class="item">
-                <div class="row"><span class="name">RCM Revenue Benchmarking</span><span class="when">Python · PostgreSQL</span></div>
-                <div class="sub">Benchmarking pipeline tracking healthcare RCM collection rates, claim denials, and clean claim metrics. <a href="https://github.com/mprantikk/rcm-revenue-benchmarking">GitHub</a></div>
+                <div class="row"><span class="name">Revenue dbt Warehouse</span><span class="when">dbt · DuckDB · SQL</span></div>
+                <div class="sub">Layered healthcare-claims warehouse (staging, core, finance marts) with 52 data tests. <a href="https://github.com/mprantikk/revenue-dbt-warehouse">GitHub</a></div>
             </div>
             <div class="item">
-                <div class="row"><span class="name">SQL Revenue Analytics</span><span class="when">PostgreSQL · SQL</span></div>
-                <div class="sub">PostgreSQL suite for BI, customer segmentation, and data-integrity checks. <a href="https://github.com/mprantikk/sql-revenue-analytics">GitHub</a></div>
+                <div class="row"><span class="name">Airflow ELT Pipeline</span><span class="when">Airflow · PostgreSQL · Docker</span></div>
+                <div class="sub">Daily, idempotent ELT DAG with a data-quality gate that fails the run on bad data. <a href="https://github.com/mprantikk/airflow-elt-pipeline">GitHub</a></div>
             </div>
             <div class="item">
-                <div class="row"><span class="name">Insight Quality Evaluation (IQE) Framework</span><span class="when">Independent research</span></div>
-                <div class="sub">"Beyond the Dashboard": a four-dimension model for judging AI-generated BI insights (Statistical Validity, Contextual Relevance, Novelty, Actionability). <a href="https://mprantikk.github.io/resume/paper.html">Read paper</a></div>
+                <div class="row"><span class="name">Claims Data QA Automation</span><span class="when">Python · pandas</span></div>
+                <div class="sub">Cleans messy EHR extracts, runs 12 integrity checks, and quarantines bad rows. <a href="https://github.com/mprantikk/claims-data-qa-automation">GitHub</a></div>
+            </div>
+            <div class="item">
+                <div class="row"><span class="name">Growth Ops Dashboard</span><span class="when">Python · Chart.js</span></div>
+                <div class="sub">ARR, NRR, churn, time to launch, and cohort retention for a B2B healthtech platform. <a href="https://mprantikk.github.io/growth-ops-dashboard/">Live</a> · <a href="https://github.com/mprantikk/growth-ops-dashboard">GitHub</a></div>
+            </div>
+            <div class="item">
+                <div class="row"><span class="name">RCM Benchmarking · SQL Revenue Analytics</span><span class="when">Python · MySQL · PostgreSQL</span></div>
+                <div class="sub">RCM KPI scorecard by payer; RFM, cohort, and CLV analytics with SQL data-quality checks. <a href="https://github.com/mprantikk/rcm-revenue-benchmarking">GitHub</a> · <a href="https://github.com/mprantikk/sql-revenue-analytics">GitHub</a></div>
+            </div>
+            <div class="item">
+                <div class="row"><span class="name">Insight Quality Evaluation (IQE) Framework</span><span class="when">Independent research · Python</span></div>
+                <div class="sub">Four-dimension model for judging AI-generated BI insights, with a tested Python implementation. <a href="https://mprantikk.github.io/resume/paper.html">Paper</a> · <a href="https://github.com/mprantikk/ai-insight-quality-evaluation">GitHub</a></div>
             </div>
 
             <h2 class="section">Education</h2>
@@ -234,12 +245,9 @@
             <h2 class="section">Certifications &amp; Training</h2>
             <p class="plain"><strong>Professional certifications:</strong> Microsoft Certified: Power BI Data Analyst Associate, PL-300 (Mar 2023) · ICAgile Certified Professional, Agile Analytics, ICP-A (Oct 2024) · Certified Supply Chain Analyst, CSCA, ISCEA · Microsoft Office Specialist: Excel Expert (Jun 2020)</p>
             <p class="plain"><strong>Courses:</strong> Google Data Analytics Professional Certificate (Coursera, Jun 2023) · IBM Data Analytics Professional Certificate (Coursera, Aug 2022) · Big Data &amp; Machine Learning, Google Cloud (May 2025) · Data Governance &amp; Stewardship, University of Washington (May 2023)</p>
-            <p class="plain"><strong>Self-development:</strong> Data Strategy for Leaders · Leading Data &amp; Analytics Teams (LinkedIn Learning) · Data Governance Foundations (DAMA) · Effective Stakeholder Communication</p>
 
-            <h2 class="section">Awards &amp; Recognition</h2>
+            <h2 class="section">Awards &amp; Languages</h2>
             <p class="plain"><strong>Star Achiever Award</strong>, ShopUp (Q1 &amp; Q2 2023) · <strong>Commando Award</strong>, Grameen Danone Foods (2021), for raising operational productivity by 20%</p>
-
-            <h2 class="section">Languages</h2>
             <p class="plain"><strong>Bengali:</strong> Native · <strong>English:</strong> Fluent</p>
         </div>
         <div class="page-number">Page 2 of 2</div>
