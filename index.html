@@ -101,7 +101,7 @@
 <body>
 
     <a class="back-btn no-print" href="https://mprantikk.github.io/">&larr; Portfolio</a>
-    <button class="download-btn no-print" onclick="window.print()">Download PDF</button>
+    <button class="download-btn no-print" onclick="savePdf()">Download PDF</button>
 
     <!-- ================= PAGE 1 ================= -->
     <div class="resume-page">
@@ -122,7 +122,7 @@
 
             <h2 class="section">Professional Summary</h2>
             <div class="summary">
-                Business Intelligence and Data Operations leader with <strong>6+ years</strong> across healthcare technology (RCM), logistics, e-commerce, and FMCG. I turn business requirements into executive dashboards, automated reporting, and revenue and financial analytics. Currently Lead, Data Ops at Commure, working across three pods (Revenue Benchmarking, Rev Ops, Launch QBR). PL-300 certified; pursuing an M.Sc. in Data Science &amp; Analytics.
+                Business Intelligence and Data Operations leader with <strong>6+ years</strong> across healthcare technology (RCM), logistics, e-commerce, and FMCG. I turn business requirements into executive dashboards, automated reporting, and revenue analytics, and build the data quality checks that make the numbers trustworthy. Currently Lead, Data Ops at Commure. PL-300 certified; pursuing an M.Sc. in Data Science &amp; Analytics.
             </div>
             <div class="hl-row">
                 <div><b>24h &rarr; 5h</b><span>to benchmark one site at Commure</span></div>
@@ -179,10 +179,9 @@
                 <div class="job-head"><span class="job-title">Automation &amp; Analytics Expert</span><span class="job-date">Feb 2022 – Jul 2024</span></div>
                 <div class="job-org">ShopUp | E-commerce &amp; Fintech</div>
                 <ul class="bul">
-                    <li>Improved HRIS (TalentX) data accuracy by <strong>15%</strong>.</li>
-                    <li>Automated HR processes to improve operational efficiency.</li>
-                    <li>Analyzed HR and revenue data and gave management clear recommendations.</li>
-                    <li>Set up data governance rules to protect HR data integrity and security. Designed and ran performance appraisal systems that gave useful insight for employee development.</li>
+                    <li>Improved HRIS (TalentX) data accuracy by <strong>15%</strong> and set up data governance rules to protect HR data integrity and security.</li>
+                    <li>Automated HR processes for operational efficiency, and analyzed HR and revenue data to give management clear recommendations.</li>
+                    <li>Designed and ran performance appraisal systems that gave useful insight for employee development.</li>
                 </ul>
             </div>
 
@@ -204,7 +203,7 @@
                 </ul>
             </div>
 
-            <h2 class="section">Projects &amp; Research <span style="font-weight:500;text-transform:none;letter-spacing:0;color:var(--muted)">· all tested in CI · more at github.com/mprantikk</span></h2>
+            <h2 class="section">Projects &amp; Research <span style="font-weight:500;text-transform:none;letter-spacing:0;color:var(--muted)">· personal projects, tested in CI · more at github.com/mprantikk</span></h2>
             <div class="item">
                 <div class="row"><span class="name">Perfexio: Performance Management SaaS</span><span class="when">JavaScript · Firebase · Chart.js</span></div>
                 <div class="sub">Multi-tenant OKR, manager review, and culture-scoring platform with leadership dashboards. <a href="https://github.com/mprantikk/perfexio-saas">GitHub</a> · <a href="https://staging-perfexio-demo.web.app/">Live demo</a></div>
@@ -250,8 +249,15 @@
     </div>
 
 <script>
+    // The browser names the saved PDF after document.title, so use a clean file name while printing.
+    function savePdf() {
+        var t = document.title;
+        document.title = 'Masud_Parvej_Resume';
+        window.print();
+        setTimeout(function () { document.title = t; }, 1000);
+    }
     if (/[?&]download=1/.test(location.search) && window.top === window.self) {
-        (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { setTimeout(function () { window.print(); }, 500); });
+        (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(function () { setTimeout(savePdf, 500); });
     }
 </script>
 </body>
